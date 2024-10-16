@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos de Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Pedidos de Pizzaria</h1>
+        
+        <div class="form-group">
+            <label for="nome">Nome do Cliente:</label>
+            <input type="text" id="nome" placeholder="Digite o nome do cliente">
+        </div>
+
+        <div class="form-group">
+            <label>Escolha as Pizzas:</label>
+            <div>
+                <label><input type="checkbox" value="Margherita"> Margherita - R$ 30,00</label><br>
+                <label><input type="checkbox" value="Pepperoni"> Pepperoni - R$ 35,00</label><br>
+                <label><input type="checkbox" value="Quattro Formaggi"> Quattro Formaggi - R$ 40,00</label><br>
+                <label><input type="checkbox" value="Hawaiian"> Hawaiian - R$ 38,00</label><br>
+                <label><input type="checkbox" value="Veggie"> Veggie - R$ 28,00</label><br>
+            </div>
+        </div>
+
+        <button onclick="registrarPedido()">Registrar Pedido</button>
+        <button onclick="consultarPedidos()">Consultar Pedidos</button>
+        
+        <div id="mensagens"></div>
+        
+        <div class="form-group">
+            <label for="valorRecebido">Valor Recebido:</label>
+            <input type="number" id="valorRecebido" placeholder="Digite o valor recebido" step="0.01">
+        </div>
+
+        <button onclick="calcularTroco()">Calcular Troco</button>
+        
+        <div id="troco" style="margin-top: 20px;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
